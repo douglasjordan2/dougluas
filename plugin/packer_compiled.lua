@@ -74,8 +74,13 @@ _G.packer_plugins = {
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\2±\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\0\1\0\2\vnowait\2\fnoremap\2\nsetup\rneo-tree\frequire\0" },
+    config = { "\27LJ\2\2À\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\nsetup\rneo-tree\frequire\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -100,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -109,6 +119,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-jsx-improve"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/vim-jsx-improve",
+    url = "https://github.com/neoclide/vim-jsx-improve"
   },
   ["vim-jsx-pretty"] = {
     loaded = true,
@@ -125,7 +140,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\2±\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\0\1\0\2\vnowait\2\fnoremap\2\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
+try_loadstring("\27LJ\2\2À\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
 if should_profile then save_profiles() end
 
