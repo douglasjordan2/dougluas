@@ -53,4 +53,9 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'},
     }
   }
+
+  -- prettier
+  use('neovim/nvim-lspconfig')
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 end)

@@ -34,8 +34,14 @@ map('n', '<leader>c', ':noh<CR>')  ---------------------------------------------
 
 -- file commands
 map('n', '<leader>s', ':w<CR>')  --------------------------------------------------  save
-map('n', '<leader>r', ':so %<CR>')  -----------------------------------------------  source
+map('n', '<leader>sa', ':wa<CR>')  ------------------------------------------------  save all
 map('n', '<leader>q', ':q<CR>')  --------------------------------------------------  quit
+map('n', '<leader>qa', ':qa<CR>')  ------------------------------------------------  quit all
+map('n', '<leader>sqa', ':wqa<CR>')  ----------------------------------------------  save all and quit
+map('n', '<leader>r', ':so %<CR>')  -----------------------------------------------  source
 
 -- terminal mappings
 map('n', '<leader>;', ':bo sp<CR>:resize 10<CR>:term<CR>i')  ----------------------  opens a terminal at the bottom of all windows
+
+-- prettier
+map('n', '<leader>p', ':Prettier<CR>')  -------------------------------------------  format current file
