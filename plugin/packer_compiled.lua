@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/mattn/emmet-vim"
   },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\2À\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\nsetup\rneo-tree\frequire\0" },
+    config = { "\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimŠ\2\1\0\5\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\1K\0\1\0\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -130,6 +130,15 @@ _G.packer_plugins = {
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-hexokinase"] = {
+    commands = { "HexokinaseToggle" },
+    config = { "\27LJ\2\2”\1\0\0\2\0\6\0\t6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\6\0\0\rfull_hex\brgb\trgba\bhsl\thsla\29Hexokinase_optInPatterns\1\2\0\0\19backgroundfull\28Hexokinase_highlighters\6g\bvim\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/opt/vim-hexokinase",
+    url = "https://github.com/RRethy/vim-hexokinase"
+  },
   ["vim-javascript"] = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/vim-javascript",
@@ -155,8 +164,14 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\2À\1\0\0\4\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2=\2\t\1B\0\2\1K\0\1\0\vwindow\1\0\0\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
+try_loadstring("\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimŠ\2\1\0\5\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\1K\0\1\0\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HexokinaseToggle lua require("packer.load")({'vim-hexokinase'}, { cmd = "HexokinaseToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)

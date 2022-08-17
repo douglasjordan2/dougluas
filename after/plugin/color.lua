@@ -4,4 +4,4 @@ vim.opt.background = "dark"
 
 vim.cmd("colorscheme tokyonight")
 
-
+vim.g.Hexokinase_highlighters  = 'foreground'

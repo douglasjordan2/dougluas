@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
 
   -- intellisense
-  use {'neoclide/coc.nvim', branch = 'release'}  --  plugins: coc-pairs, coc-json, coc-css
+  use {'neoclide/coc.nvim', branch = 'release'}  --  plugins: coc-pairs, coc-json, coc-css, coc-highlight
 
   -- language-specific plugins
   use 'tpope/vim-liquid'  -------------------------  shopify 
@@ -30,6 +30,16 @@ return require('packer').startup(function(use)
     },
     config = function ()
       require("neo-tree").setup({
+        event_handlers = { 
+          { 
+            event = "vim_buffer_enter", 
+            handler = function() 
+              if vim.bo.filetype == "neo-tree" then 
+                vim.cmd("set relativenumber") 
+              end 
+            end, 
+          },
+        },
         window = {
           position = "right",
           mapping_options = {
@@ -58,4 +68,17 @@ return require('packer').startup(function(use)
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
+
+  -- color highlighting
+  use {
+    'RRethy/vim-hexokinase',
+    run = 'make hexokinase',
+    cmd = {"HexokinaseToggle"},
+    config = function()
+        vim.g.Hexokinase_highlighters = {'backgroundfull'}
+        vim.g.Hexokinase_optInPatterns = {
+            'full_hex', 'rgb', 'rgba', 'hsl', 'hsla'
+        }
+    end
+  }
 end)

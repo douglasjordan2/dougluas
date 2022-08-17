@@ -45,3 +45,10 @@ map('n', '<leader>;', ':bo sp<CR>:resize 10<CR>:term<CR>i')  -------------------
 
 -- prettier
 map('n', '<leader>p', ':Prettier<CR>')  -------------------------------------------  format current file
+
+-- autocomplete
+vim.cmd([[
+    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+]])  -----------------------------------------------------------------------------  confirms selection with ENTER
+
