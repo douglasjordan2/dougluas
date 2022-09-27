@@ -106,7 +106,7 @@ _G.packer_plugins = {
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\2ñ\1\0\0\3\0\f\0\0296\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\6\0B\0\3\0016\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\a\0B\0\3\0016\0\b\0'\1\t\0B\0\2\0029\0\n\0005\1\v\0B\0\2\1K\0\1\0\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\reol:ðŸ‚¡\fspace: \vappend\14listchars\tlist\18termguicolors\bopt\bvim\0" },
+    config = { "\27LJ\2\2í\1\0\0\3\0\f\0\0296\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\6\0B\0\3\0016\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\a\0B\0\3\0016\0\b\0'\1\t\0B\0\2\0029\0\n\0005\1\v\0B\0\2\1K\0\1\0\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\teol:\fspace: \vappend\14listchars\tlist\18termguicolors\bopt\bvim\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -267,7 +267,7 @@ try_loadstring("\27LJ\2\2u\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B
 time([[Config for github-nvim-theme]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\2ñ\1\0\0\3\0\f\0\0296\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\6\0B\0\3\0016\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\a\0B\0\3\0016\0\b\0'\1\t\0B\0\2\0029\0\n\0005\1\v\0B\0\2\1K\0\1\0\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\reol:ðŸ‚¡\fspace: \vappend\14listchars\tlist\18termguicolors\bopt\bvim\0", "config", "indent-blankline.nvim")
+try_loadstring("\27LJ\2\2í\1\0\0\3\0\f\0\0296\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\6\0B\0\3\0016\0\0\0009\0\1\0009\0\4\0\18\1\0\0009\0\5\0'\2\a\0B\0\3\0016\0\b\0'\1\t\0B\0\2\0029\0\n\0005\1\v\0B\0\2\1K\0\1\0\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\teol:\fspace: \vappend\14listchars\tlist\18termguicolors\bopt\bvim\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
