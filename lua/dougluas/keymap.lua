@@ -52,12 +52,6 @@ vim.cmd([[ autocmd TermClose * execute "bdelete! " . expand("<abuf>") ]])  -----
 -- prettier
 map('n', '<leader>p', ':Prettier<CR>')  -------------------------------------------  format current file
 
--- autocomplete
-vim.cmd([[
-    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-]])  -----------------------------------------------------------------------------  confirms selection with ENTER
-
 -- move around a bit easier
 map('n', '<leader>h', '10h<CR>')  ------------------------------------------------  jump left 10 lines 
 map('n', '<leader>j', '10j<CR>')  ------------------------------------------------  jump up 10 lines
@@ -74,5 +68,3 @@ map('n', '<leader>d/', '0xxxj0')  ----------------------------------------------
 map('n', '<leader>l', '0i{% comment %}<ESC>$a{% endcomment %}<ESC>j0')  ----------  liquid comment
 map('n', '<leader>dl', '0v%d$v%dj0')  --------------------------------------------  delete liquid comment
 
-
-vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]

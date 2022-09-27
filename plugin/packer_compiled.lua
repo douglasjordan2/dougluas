@@ -74,18 +74,56 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["coc.nvim"] = {
+  LuaSnip = {
     loaded = true,
-    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["animation.nvim"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/animation.nvim",
+    url = "https://github.com/anuvyklack/animation.nvim"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["github-nvim-theme"] = {
+    config = { "\27LJ\2\2u\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\3\16transparent\2\19function_style\vitalic\16theme_style\tdark\nsetup\17github-theme\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\2à\1\0\0\3\0\n\0\0186\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0009\0\3\0\18\1\0\0009\0\4\0'\2\5\0B\0\3\0016\0\6\0'\1\a\0B\0\2\0029\0\b\0005\1\t\0B\0\2\1K\0\1\0\1\0\3\25show_current_context\2\25space_char_blankline\6 \31show_current_context_start\2\nsetup\21indent_blankline\frequire\fspace: \vappend\14listchars\tlist\bopt\bvim\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lualine.nvim"] = {
+    config = { "\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\flualine\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  middleclass = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/middleclass",
+    url = "https://github.com/anuvyklack/middleclass"
+  },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimŠ\2\1\0\5\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\1K\0\1\0\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0" },
+    config = { "\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimÌ\2\1\0\5\0\17\0\0236\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\0016\0\14\0009\0\15\0'\1\16\0B\0\2\1K\0\1\0.hi NvimTreeNormal guibg=NONE ctermbg=NONE\bcmd\bvim\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -100,16 +138,35 @@ _G.packer_plugins = {
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
+  ["nvim-cmp"] = {
+    config = { "\27LJ\2\0028\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\29dougluas.config.nvim-cmp\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
   ["nvim-lspconfig"] = {
+    config = { "\27LJ\2\0023\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\24dougluas.config.lsp\frequire\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-toggler"] = {
+    config = { "\27LJ\2\2Ã\1\0\0\5\0\f\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\0016\0\6\0009\0\a\0009\0\b\0005\1\t\0'\2\n\0006\3\0\0'\4\1\0B\3\2\0029\3\v\3B\0\4\1K\0\1\0\vtoggle\15<leader>cl\1\3\0\0\6n\6v\bset\vkeymap\bvim\rinverses\1\0\0\1\0\2\tnext\rprevious\nclass\rfunction\nsetup\17nvim-toggler\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/nvim-toggler",
+    url = "https://github.com/nguyenvukhang/nvim-toggler"
   },
   ["nvim-transparent"] = {
     config = { "\27LJ\2\2H\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\16transparent\frequire\0" },
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/nvim-transparent",
     url = "https://github.com/xiyaowong/nvim-transparent"
+  },
+  ["nvim-treesitter"] = {
+    config = { "\27LJ\2\2i\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\1K\0\1\0\14highlight\1\0\0\1\0\1\venable\2\nsetup\28nvim-treesitter.configs\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -120,6 +177,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pears.nvim"] = {
+    config = { "\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\npears\frequire\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/pears.nvim",
+    url = "https://github.com/steelsojka/pears.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -136,25 +199,15 @@ _G.packer_plugins = {
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
-    config = { "\27LJ\2\2L\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0" },
-    loaded = true,
-    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ["typescript-vim"] = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/typescript-vim",
     url = "https://github.com/leafgarland/typescript-vim"
   },
-  ["vim-hexokinase"] = {
-    commands = { "HexokinaseToggle" },
-    config = { "\27LJ\2\2”\1\0\0\2\0\6\0\t6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\6\0\0\rfull_hex\brgb\trgba\bhsl\thsla\29Hexokinase_optInPatterns\1\2\0\0\19backgroundfull\28Hexokinase_highlighters\6g\bvim\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/opt/vim-hexokinase",
-    url = "https://github.com/RRethy/vim-hexokinase"
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-jsx"] = {
     loaded = true,
@@ -185,28 +238,60 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/vim-tsx",
     url = "https://github.com/ianks/vim-tsx"
+  },
+  ["windows.nvim"] = {
+    config = { "\27LJ\2\2Ü\1\0\0\4\0\r\0\0256\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\0\0009\0\5\0009\0\6\0005\1\a\0'\2\b\0'\3\t\0B\0\4\0016\0\n\0'\1\v\0B\0\2\0029\0\f\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\29<Cmd>WindowsMaximize<CR>\14<leader>z\1\2\0\0\6n\bset\vkeymap\16equalalways\16winminwidth\rwinwidth\6o\bvim\0" },
+    loaded = true,
+    path = "/home/douglasjordan/.local/share/nvim/site/pack/packer/start/windows.nvim",
+    url = "https://github.com/anuvyklack/windows.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-toggler
+time([[Config for nvim-toggler]], true)
+try_loadstring("\27LJ\2\2Ã\1\0\0\5\0\f\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\0016\0\6\0009\0\a\0009\0\b\0005\1\t\0'\2\n\0006\3\0\0'\4\1\0B\3\2\0029\3\v\3B\0\4\1K\0\1\0\vtoggle\15<leader>cl\1\3\0\0\6n\6v\bset\vkeymap\bvim\rinverses\1\0\0\1\0\2\tnext\rprevious\nclass\rfunction\nsetup\17nvim-toggler\frequire\0", "config", "nvim-toggler")
+time([[Config for nvim-toggler]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\2i\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\1K\0\1\0\14highlight\1\0\0\1\0\1\venable\2\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\0028\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\29dougluas.config.nvim-cmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: github-nvim-theme
+time([[Config for github-nvim-theme]], true)
+try_loadstring("\27LJ\2\2u\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\3\16transparent\2\19function_style\vitalic\16theme_style\tdark\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
+time([[Config for github-nvim-theme]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\2à\1\0\0\3\0\n\0\0186\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0009\0\3\0\18\1\0\0009\0\4\0'\2\5\0B\0\3\0016\0\6\0'\1\a\0B\0\2\0029\0\b\0005\1\t\0B\0\2\1K\0\1\0\1\0\3\25show_current_context\2\25space_char_blankline\6 \31show_current_context_start\2\nsetup\21indent_blankline\frequire\fspace: \vappend\14listchars\tlist\bopt\bvim\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimŠ\2\1\0\5\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\1K\0\1\0\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
+try_loadstring("\27LJ\2\2_\0\0\2\0\6\0\n6\0\0\0009\0\1\0009\0\2\0\a\0\3\0X\0\4€6\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\23set relativenumber\bcmd\rneo-tree\rfiletype\abo\bvimÌ\2\1\0\5\0\17\0\0236\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0004\2\3\0005\3\3\0003\4\4\0=\4\5\3>\3\1\2=\2\a\0015\2\b\0005\3\t\0=\3\n\0025\3\v\0=\3\f\2=\2\r\1B\0\2\0016\0\14\0009\0\15\0'\1\16\0B\0\2\1K\0\1\0.hi NvimTreeNormal guibg=NONE ctermbg=NONE\bcmd\bvim\vwindow\rmappings\1\0\3\6s\16open_vsplit\6l\topen\6i\15open_split\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\1\rposition\nright\19event_handlers\1\0\0\fhandler\0\1\0\1\nevent\21vim_buffer_enter\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
--- Config for: tokyonight.nvim
-time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\2\2L\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
-time([[Config for tokyonight.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: pears.nvim
+time([[Config for pears.nvim]], true)
+try_loadstring("\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\npears\frequire\0", "config", "pears.nvim")
+time([[Config for pears.nvim]], false)
+-- Config for: windows.nvim
+time([[Config for windows.nvim]], true)
+try_loadstring("\27LJ\2\2Ü\1\0\0\4\0\r\0\0256\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\0\0009\0\5\0009\0\6\0005\1\a\0'\2\b\0'\3\t\0B\0\4\0016\0\n\0'\1\v\0B\0\2\0029\0\f\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\29<Cmd>WindowsMaximize<CR>\14<leader>z\1\2\0\0\6n\bset\vkeymap\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
+time([[Config for windows.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\0023\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\24dougluas.config.lsp\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-transparent
 time([[Config for nvim-transparent]], true)
 try_loadstring("\27LJ\2\2H\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\16transparent\frequire\0", "config", "nvim-transparent")
 time([[Config for nvim-transparent]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HexokinaseToggle lua require("packer.load")({'vim-hexokinase'}, { cmd = "HexokinaseToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-time([[Defining lazy-load commands]], false)
-
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
