@@ -17,6 +17,7 @@ map('n', '<leader>fe', ':Neotree filesystem reveal right<CR>')  ----------------
 map('n', '<leader>fc', ':Neotree close<CR>')  -------------------------------------  close file explorer
 map('n', '<leader>t', ':Telescope<CR>')  ------------------------------------------  open telescope
 map('n', '<leader>tg', ':Telescope live_grep<CR>')  -------------------------------  grep
+map('n', '<leader>b', ':Telescope buffers<CR>')  ----------------------------------  buffers
 
 -- open windows with CTRL + arrow keys
 map('n', '<leader><down>', '<C-w>s')  ---------------------------------------------------  open new window below

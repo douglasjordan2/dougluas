@@ -8,15 +8,15 @@ return require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     config = function ()
-      require('lualine').setup({
-      })
+      require'lualine'.setup{}
     end
   }
- 
+
   -- windows
-  use { "anuvyklack/windows.nvim",
-  requires = {
-    "anuvyklack/middleclass",
+  use { 
+    "anuvyklack/windows.nvim",
+    requires = {
+      "anuvyklack/middleclass",
       "anuvyklack/animation.nvim"
     },
     config = function()
@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- color scheme
+  -- color highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
@@ -39,7 +39,9 @@ return require('packer').startup(function(use)
         }
       }
     end,
-  } -- treesitter
+  }
+
+  -- color scheme
   use({
     'projekt0n/github-nvim-theme',
     config = function()
@@ -50,84 +52,86 @@ return require('packer').startup(function(use)
       })
     end
   })
+
   use {
     'lukas-reineke/indent-blankline.nvim',
     config = function ()
+      vim.opt.termguicolors = true
+
       vim.opt.list = true
       vim.opt.listchars:append "space: "
+      vim.opt.listchars:append "eol:🂡"
 
-      require('indent_blankline').setup {
+      require("indent_blankline").setup {
         space_char_blankline = " ",
-        show_current_context = true,
-        show_current_context_start = true,
       }
     end
   }
 
+  -- intellisense
+  use {
+    'neovim/nvim-lspconfig',
+    config = function () 
+      require('dougluas.config.lsp')
+    end
+  }
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp', -- LSP source
+      'saadparwaiz1/cmp_luasnip' -- Snippets
+    },
+    config = function ()
+      require('dougluas.config.nvim-cmp')
+    end
+  }
+  use 'L3MON4D3/LuaSnip'
 
--- intellisense
---use {'neoclide/coc.nvim', branch = 'release'}  --  plugins: coc-pairs, coc-json, coc-css, coc-highlight
-use {
-  'neovim/nvim-lspconfig',
-  config = function () 
-    require('dougluas.config.lsp')
-  end
-}
-use {
-  'hrsh7th/nvim-cmp',
-  config = function ()
-    require('dougluas.config.nvim-cmp')
-  end
-}
-use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-use 'L3MON4D3/LuaSnip'
+  use {
+    'steelsojka/pears.nvim',
+    config = function ()
+      require'pears'.setup()
+    end
+  }
 
-use {
-  'steelsojka/pears.nvim',
-  config = function ()
-    require'pears'.setup()
-  end
-}
+  -- emmet
+  use 'mattn/emmet-vim'
+  use { 
+    'nguyenvukhang/nvim-toggler',
+    config = function ()
+      require('nvim-toggler').setup({
+        inverses = {
+          ['next'] = 'previous',
+          ['class'] = 'function'
+        }
+      })
+      vim.keymap.set({ 'n', 'v' }, '<leader>cl', require('nvim-toggler').toggle)
+    end
+  } -- invert words
 
--- emmet
-use 'mattn/emmet-vim'
-use { 
-  'nguyenvukhang/nvim-toggler',
-  config = function ()
-    require('nvim-toggler').setup({
-      inverses = {
-        ['next'] = 'previous',
-        ['class'] = 'function'
-      }
-    })
-    vim.keymap.set({ 'n', 'v' }, '<leader>cl', require('nvim-toggler').toggle)
-  end
-} -- invert words
+  -- language-specific plugins
+  use 'tpope/vim-liquid'  -------------------------  shopify 
+  use 'pangloss/vim-javascript'   -----------------  js
+  use 'mxw/vim-jsx'  -----------------------------------
+  use 'MaxMEllon/vim-jsx-pretty'  ----------------------  
+  use 'neoclide/vim-jsx-improve'  -----------------  jsx
+  use 'leafgarland/typescript-vim'  ---------------  ts
+  use 'ianks/vim-tsx'  ----------------------------------
+  use 'peitalin/vim-jsx-typescript' ---------------  tsx
 
--- language-specific plugins
-use 'tpope/vim-liquid'  -------------------------  shopify 
-use 'pangloss/vim-javascript'   -----------------  js
-use 'mxw/vim-jsx'  -----------------------------------
-use 'MaxMEllon/vim-jsx-pretty'  ----------------------  
-use 'neoclide/vim-jsx-improve'  -----------------  jsx
-use 'leafgarland/typescript-vim'  ---------------  ts
-use 'ianks/vim-tsx'  ----------------------------------
-use 'peitalin/vim-jsx-typescript' ---------------  tsx
+  -- file explorer
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
--- file explorer
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-use {
-  'nvim-neo-tree/neo-tree.nvim',
-  branch = 'v2.x',
-  requires = { 
-    'nvim-lua/plenary.nvim',
-    'kyazdani42/nvim-web-devicons',  --  using ubuntu nerd font
-    'MunifTanjim/nui.nvim',
-  },
-  config = function ()
-    require('neo-tree').setup({
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
+    requires = { 
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons',  --  using ubuntu nerd font
+      'MunifTanjim/nui.nvim',
+    },
+    config = function ()
+      require('neo-tree').setup({
         event_handlers = { 
           { 
             event = 'vim_buffer_enter', 
@@ -165,30 +169,23 @@ use {
     end
   })
 
-  vim.cmd("autocmd Colorscheme * highlight NvimTreeNormal guibg=none guifg=#9da5b3")
-
   -- fuzzy finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { 
       {'nvim-lua/plenary.nvim'},
-    }
+    },
+    config = function ()
+      require'telescope'.setup {
+        defaults = {
+          initial_mode = "normal"
+        }
+      }
+    end
   }
 
   -- prettier
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
-  -- color highlighting
---  use {
---    'RRethy/vim-hexokinase',
---    run = 'make hexokinase',
---    cmd = {'HexokinaseToggle'},
---    config = function()
---        vim.g.Hexokinase_highlighters = {'backgroundfull'}
---        vim.g.Hexokinase_optInPatterns = {
---            'full_hex', 'rgb', 'rgba', 'hsl', 'hsla'
---        }
---    end
---  }
 end)
