@@ -1,2 +1,1 @@
-# dougluas
-my neovim + lua config
+# new-newovim-config

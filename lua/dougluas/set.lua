@@ -18,5 +18,3 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.g.html_indent_script1 = 'zero'
-
-vim.opt.swapfile = false
