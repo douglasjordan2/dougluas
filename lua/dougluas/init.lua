@@ -1,6 +1,2 @@
 require('dougluas.set')
 require('dougluas.keymap')
-require('dougluas.emmet') 
-require('dougluas.reload')
--- require('dougluas.config.lsp')
--- require('dougluas.config.nvim-cmp')

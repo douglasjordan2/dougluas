@@ -11,22 +11,18 @@ vim.opt.timeoutlen = 300
 
 -- map leader
 vim.g.mapleader = " "  ------------------------------------------------------------  set leader to SPACE
-map('i', '<C-c>', '<ESC>')  -------------------------------------------------------  escape with CTRL+C
+map('i', '<C-c>', '<ESC>')  -------------------------------------------------------  escape insert mode with CTRL+C
 
 -- tabs
 map('n', '<leader>pt', 'gT')  -----------------------------------------------------  previous tab
 map('n', '<leader>nt', 'gt')  -----------------------------------------------------  next tab
 
 -- file exporer
-map('n', '<leader>fe', ':Neotree filesystem reveal right<CR>')  -------------------  open file explorer
-map('n', '<leader>fc', ':Neotree close<CR>')  -------------------------------------  close file explorer
 map('n', '<leader>t', ':Telescope<CR>')  ------------------------------------------  open telescope
-map('n', '<leader>ff', ':Telescope live_grep<CR>')  -------------------------------  fuzzy find
-map('n', '<leader>b', ':Telescope buffers<CR>')  ----------------------------------  buffers
 
 -- open windows with CTRL + arrow keys
-map('n', '<leader><down>', '<C-w>s')  --------------------------------------------  open new window below
-map('n', '<leader><right>', '<C-w>v')  --------------------------------------------------  open new window right
+map('n', '<leader><down>', '<C-w>s')   -------------------------------------------  open new window below
+map('n', '<leader><right>', '<C-w>v')  -------------------------------------------  open new window right
 
 -- move around splits using arrow keys
 map('n', '<left>', '<C-w>h')  -----------------------------------------------------  move to the next window on the left
@@ -39,6 +35,17 @@ map('n', '<leader>wh', '<C-w>t<C-w>K')  ----------------------------------------
 map('n', '<leader>wv', '<C-w>t<C-w>H')  -------------------------------------------  change horizontal to vertical
 map('n', '<leader>=', '<C-w>=')  --------------------------------------------------  even window sizes
 
+-- cool things with text
+map("v", "J", ":m '>+1<CR>gv=gv")  ------------------------------------------------  move all highlighted text up
+map("v", "K", ":m '<-2<CR>gv=gv")  ------------------------------------------------  move all highlighted text down
+
+-- cursor sanity
+map("n", "J", "mbJ`b")  -----------------------------------------------------------  keep cursor in same place when combining lines with J
+map("n", "<C-u>", "<C-u>zz")  -----------------------------------------------------  jump half page up and keep cursor in center
+map("n", "<C-d>", "<C-d>zz")  -----------------------------------------------------  jump half page down and keep cursor in center
+map("n", "n", "nzzzv")  -----------------------------------------------------------  keep search selection in center of screen - next
+map("n", "N", "Nzzzv")  -----------------------------------------------------------  keep search selection in center of screen - previous
+
 -- visual editor commands
 map('n', '<leader>c', ':noh<CR>')  ------------------------------------------------  clear highlighting
 map('n', '<leader><Tab>', 'ddO')  -------------------------------------------------  fix indent when at first char of new line betweeen brackets (etc)
@@ -50,35 +57,8 @@ map('n', '<leader>q', ':q<CR>')  -----------------------------------------------
 map('n', '<leader>qq', ':qa<CR>')  ------------------------------------------------  quit all
 map('n', '<leader>sqq', ':wqa<CR>')  ----------------------------------------------  save all and quit
 map('n', '<leader>r', ':so %<CR>')  -----------------------------------------------  source
+map('n', '<leader>p', ":Prettier")  -----------------------------------------------  format file
 
 -- terminal mappings
 map('n', '<leader>;', ':bo sp<CR>:resize 10<CR>:term<CR>i')  ----------------------  opens a terminal at the bottom of all windows
 vim.cmd([[ autocmd TermClose * execute "bdelete! " . expand("<abuf>") ]])  --------  closes the terminal without showing process exited and requiring <CR>
-
--- prettier
-map('n', '<leader>p', ':Prettier<CR>')  -------------------------------------------  format current file
-
--- move around a bit easier
-map('n', '<leader>h', '10h<CR>')  ------------------------------------------------  jump left 10 line% endcomment %s 
-map('n', '<leader>j', '10j<CR>')  ------------------------------------------------  jump up 10 lines
-map('n', '<leader>k', '10k<CR>')  ------------------------------------------------  jump down 10 lines
-map('n', '<leader>l', '10l<CR>')  ------------------------------------------------  jump right 10 lines
-map('n', '<leader><leader>h', '100h<CR>')  ---------------------------------------  jump left 100 lines
-map('n', '<leader><leader>j', '100j<CR>')  ---------------------------------------  jump up 100 lines
-map('n', '<leader><leader>k', '100k<CR>')  ---------------------------------------  jump down 100 lines
-map('n', '<leader><leader>l', '100l<CR>')  ---------------------------------------  jump right 100 lines
-
--- emmets (so to speak)
-map('n', '<leader>/', '0i// <ESC>j0')  -------------------------------------------  javascript comment
-map('n', '<leader>d/', '0xxxj0')  ------------------------------------------------  delete js commend
-map('n', '<leader>l', '0v$di{% comment %$p$a{% endcomment %')  ----------  liquid comment
-map('n', '<leader>dl', '0v%d$v%dj0')  --------------------------------------------  delete liquid comment
-
--- autocomplete
-vim.cmd([[
-    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-]])  ----------------------------------------------------------------------------  confirm selection with ENTER
-
--- reload config
-map('n', '<leader>rl', '<cmd>lua ReloadConfig()<CR>')

@@ -1,5 +1,8 @@
-vim.opt.background = "dark"
+vim.cmd("set termguicolors")
 
-vim.cmd('set termguicolors')
+require("transparent").setup({
+  enable = true
+})
 
-vim.cmd("autocmd Colorscheme * highlight NvimTreeNormal guibg=none guifg=#9da5b3")  --  make nvim tree tranparent
+require('lush_theme.arctic')
+vim.cmd("colorscheme arctic")
