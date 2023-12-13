@@ -19,6 +19,7 @@ map('n', '<leader>nt', 'gt')  --------------------------------------------------
 
 -- file exporer
 map('n', '<leader>t', ':Telescope<CR>')  ------------------------------------------  open telescope
+map('n', '<leader>pv', ':Neotree filesystem reveal right<CR>')  -----------------------  open neotree
 
 -- open windows with CTRL + arrow keys
 map('n', '<leader><down>', '<C-w>s')   -------------------------------------------  open new window below

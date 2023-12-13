@@ -20,4 +20,4 @@ vim.g.html_indent_script1 = 'zero'
 vim.g.netrw_liststyle = 3
 vim.g.netrw_banner = 0
 
-vim.cmd([[ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact ]])
+-- vim.cmd([[ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx ]])

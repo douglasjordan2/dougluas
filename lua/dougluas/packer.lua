@@ -5,22 +5,27 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Color scheme and syntax
-  use "rktjmp/lush.nvim"
-  use "rockyzhang24/arctic.nvim"
+  use "catppuccin/nvim"
   use 'xiyaowong/nvim-transparent'
   use {
-    'nvim-treesitter/nvim-treesitter', 
+    'nvim-treesitter/nvim-treesitter',
     { run = ':TSUpdate' }
   }
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Telescope and friends
   use "nvim-telescope/telescope.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
   use 'theprimeagen/harpoon'
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    }
+  }
 
   -- Beautify Editor
-  use 'goolord/alpha-nvim' 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -28,39 +33,29 @@ return require('packer').startup(function(use)
 
   -- Code completion and formatting
   use 'steelsojka/pears.nvim'
-  use 'MunifTanjim/prettier.nvim'
-  -- use 'mattn/emmet-vim'
-
-  -- LSP
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
-
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-nvim-lua'},
-
-      -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
-    }
+    'prettier/vim-prettier',
+    run = 'yarn install',
+    ft = { "javascript", "typescript", "typescriptreact", "javascriptreact", "css", "less", "scss", "json", "markdown" },
   }
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+  
+  -- LSP and AI
+  use 'Exafunction/codeium.vim'
+  use('neovim/nvim-lspconfig')
+  use 'kabouzeid/nvim-lspinstall'
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 
   -- language extensions
+  use 'tpope/vim-liquid'
   use 'pangloss/vim-javascript'
   use 'leafgarland/typescript-vim'
   use 'peitalin/vim-jsx-typescript'
   use 'MaxMEllon/vim-jsx-pretty'
   use 'neoclide/vim-jsx-improve'
 
-  use 'tpope/vim-liquid'
 end)
